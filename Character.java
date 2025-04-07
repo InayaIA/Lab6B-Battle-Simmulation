@@ -1,3 +1,4 @@
+import java.util.Random;
 /**
  * @author: Shahd Abdellatif & Inaya
  * @since : 04/05/2025
@@ -22,15 +23,18 @@ public class Character
         this.health=MAX_HEALTH;
 
     }
-    public  int attack(Character opponent,int randNum)
+    public  int attack(Character c)
     {
+        
         int damage = BASE_ATTACK+strength;
+        Random rnd=new Random();
+        int randNum=rnd.nextInt(10)+1;
         if(randNum==1)
             damage+=5;
-        opponent.subtractDamage(damage);
+        c.takeDamage(damage);
         return damage;
     }
-    public void subtractDamage(int x)
+    public void takeDamage(int x)
     {
         health-=x;
 
@@ -70,6 +74,6 @@ public class Character
 
     public String toString()
     {
-        return name+"[Strength: "+strength+", Speed: "+speed+", Health: "+ "]";
+        return name+"[Strength: "+strength+", Speed: "+speed+" ]";
     }
 }
