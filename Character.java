@@ -7,7 +7,7 @@ import java.util.Random;
 public class Character
 {
     private  String name;
-    private int health;
+    private  int health;
     private  int strength;
     private  int speed;
 
@@ -74,6 +74,6 @@ public class Character
 
     public String toString()
     {
-        return name+"[Strength: "+strength+", Speed: "+speed+" ]";
+        return name+"[Strength: "+strength+", Speed: "+speed+"]";
     }
 }
