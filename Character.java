@@ -55,7 +55,7 @@ public class Character
     }
 
     /**
-     * 
+     * This method is called when the character is taking damage.
      * @param x
      */
     public void takeDamage(int x)
@@ -63,7 +63,10 @@ public class Character
         health-=x;
 
     }
-
+    /**
+     * This method is called when the character is healed
+     * @return
+     */
     public int heal()
     {
         int heal=BASE_HEAL+(2*speed);
@@ -75,27 +78,46 @@ public class Character
         return heal;
     }
 
+    /**
+     * This method returns the name of the character.
+     * @return
+     */
     public String getName()
     {
         return name;
     }
 
+    /**
+     * This method returns the strengths for the characters
+     * @return
+     */
     public int getStrength()
     {
         return strength;
 
     }
 
+    /**
+     * This method returns the set value of speed
+     * @return
+     */
     public int getSpeed()
     {
         return speed;
     }
 
+    /**
+     * This method returns the health for the character
+     * @return
+     */
     public int getHealth()
     {
         return health;
     }
 
+    /**
+     * This method is to display each character with its characteristics
+     */
     public String toString()
     {
         return name+"[Strength: "+strength+", Speed: "+speed+" ]";
