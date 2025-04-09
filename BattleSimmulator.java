@@ -2,14 +2,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class BattleSimmulator {
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         Character c1 = new Character("Gandolf the Grey ",3, 2);
         Character c2 = new Character("Dobby the Elf ", 2, 3); 
 
         Random rand = new Random();
         Scanner kbd = new Scanner(System.in);
 
-        System.out.println("It's a dual to the death. Let's welcome our opponents: " + "\n" 
+        System.out.println("It's a dual to the death. Let's welcome our opponents: " + "\n"
         + c1 + "\n" + "            AND \n" + c2);
 
         System.out.println("Let the battle commence! " + "\n" + "***************************************");
@@ -18,7 +18,7 @@ public class BattleSimmulator {
         while (c1.getHealth() > 0 && c2.getHealth() > 0)
         {
         // Character 1's turn
-            if (rand.nextInt(100) < 70)
+            if (rand.nextInt(10) < 7)
             { // 70% chance to attack
                 int damg = c1.attack(c2);
                 System.out.println(c1.getName() + " ATTACKS! They inflict " + damg + " damage!");
@@ -32,12 +32,12 @@ public class BattleSimmulator {
             // Character 2's turn
             if (c2.getHealth() > 0)
             {
-                if (rand.nextInt(100) < 70) 
+                if (rand.nextInt(100) < 70)
                 {
                     int damg = c2.attack(c1);
                     System.out.println(c2.getName() + " ATTACKS! They inflict " + damg + " damage!");
                 }
-                else 
+                else
                 {
                     int healed = c2.heal();
                     System.out.println(c2.getName() + " HEALS. They gained " + healed + " health.");
