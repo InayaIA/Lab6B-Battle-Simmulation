@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class BattleSimmulator {
         public static void main(String[] args) {
         Character c1 = new Character("Gandolf the Grey ",3, 2);
-        Character c2 = new Character("Dobby the Elf ", 2, 3); 
+        Character c2 = new Character("Dobby the Elf ", 2, 3);
 
         Random rand = new Random();
         Scanner kbd = new Scanner(System.in);
@@ -32,7 +32,7 @@ public class BattleSimmulator {
             // Character 2's turn
             if (c2.getHealth() > 0)
             {
-                if (rand.nextInt(100) < 70)
+                if (rand.nextInt(10) < 7)
                 {
                     int damg = c2.attack(c1);
                     System.out.println(c2.getName() + " ATTACKS! They inflict " + damg + " damage!");
